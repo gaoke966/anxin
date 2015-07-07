@@ -1,0 +1,40 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+		<div class="diywap_right">
+		<div class="well well-sm">评论管理</div>
+					<table class="table table-hover table-bordered">
+			<tr>
+			  <td>ID</td>
+			  <td width="300">内容</td>
+			  <td>用户名</td>
+			  <td>主页</td>
+			  <td>邮箱</td>	
+			  <td >文章</td>
+			  <td>状态</td>
+			  <td>管理</td>
+			  <td>时间</td>
+			</tr>
+			<volist name="commentlist" id="vo">
+			 <tr style="background:#ffffff;">
+			  <td height="25" align="center">{$vo.id}</td>
+			  <td width="300">{$vo.connent}</td>
+			  <td align="center">{$vo.name}</td>
+			  <td align="center">{$vo.homepage}</td>
+			  <td align="center">{$vo.email}</td>
+			  <td align="center"><a href="__ROOT__{$vo.url}">查看</a></td>
+			  <td align="center"><if condition="$vo.isshow eq 1">已验证<else/><span class="c9">未验证</span></if></td>			
+			  <td align="center"><a href="__GROUP__/Index/reply/id/{$vo.id}">回复</a> <a href="__GROUP__/Index/showreply/id/{$vo.id}" >验证</a> <a href="__GROUP__/Index/delreply/id/{$vo.id}" >删除</a></td>
+			  <td align="center">{$vo.time}</td>
+			</tr>
+			</volist>
+			
+		</table>
+		
+			
+<ul class="pagination">{$page}</ul>
+
+		</div>
+		</div>
+		</div>
+		</body>
+		</html>

@@ -1,0 +1,51 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+	<div class="diywap_right">
+		<div class="well well-sm" >添加自定义菜单 <small ><font color="red">最多只能添加三个主菜单和5个子菜单，修改和添加点击生成微信菜单</font></small></div>
+		<div class="well well-sm" >
+		<form action="__GROUP__/Weixin/menuset" method="post" >
+		  Appid:<input type="text" name="appid" value="{$menuset.appid}">
+		  secret:<input type="text" name="secret" value="{$menuset.secret}">
+			<input type="hidden" name="id" value="{$menuset.id}" >
+		  <input type="submit" value="修改" >
+		</form>
+		</div>
+			<form action="__GROUP__/Weixin/sortcate" method="post" />
+	<table class="table table-bordered table-hover table-condensed">
+	  <tr>
+		<th>ID</th>
+		<th>菜单名</th>		
+		<th>排序</th>
+		<th>类型</th>
+
+		<th>操作</th>
+	  </tr>
+	 
+	  <volist name="cate" id="vo">
+	  <tr>
+			<td class="font12">{$vo.id}</td>
+			<td class="font12">{$vo.html}{$vo.name}</td>		
+			<td class="font12"><input type="text" name="{$vo.id}"  value="{$vo.sort}" /></td>	
+			<td class="font12"><if condition="$vo.type eq view">网页跳转({$vo.url})<elseif condition="$vo.type eq click"/>点击类型<else />主菜单</if></td>	
+			<td class="font12"><if condition="$vo.button eq 1"><a href="__GROUP__/Weixin/menu/id/{$vo.id}">添加二级菜单</a> |</if>  <a href="__GROUP__/Weixin/xmenu/id/{$vo.id}">修改</a> | <a href="__GROUP__/Weixin/delmenu/id/{$vo.id}">删除</a></td>
+	  </tr>
+	 
+	  </volist>
+	 
+	  
+	 
+	</table>
+	<div class="form-group">
+						<div class="col-sm-offset-3 col-sm-4">
+						   <button type="subimt" class="btn btn-default" id="post">排序</button>
+						  <a href="__ROOT__/index.php?s=/Weixin/menu" class="btn btn-default" >生成微信自定义菜单</a></button>						
+						</div>
+					  </div>
+	 </form>
+	
+			
+
+		</div>
+	</div>
+</body>
+</html>

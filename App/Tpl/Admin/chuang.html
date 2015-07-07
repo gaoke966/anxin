@@ -1,0 +1,32 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+
+<div class="diywap_right">
+		<div class="well well-sm">后台管理员设置</div>
+		<form class="form-horizontal"  action="" method="post" />
+			<div class="form-group">
+			 <label for="pic_size" class="col-sm-2 control-label">上传大小限制:</label>
+				 <div class="col-sm-4">
+					<input type="pic_size" name="pic_size" value="{$Think.config.pic_size}" class="form-control"  placeholder="上传大小限制">*字节，1KB=1024字节
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="pic_withe" class="col-sm-2 control-label">缩略图片宽:</label>
+				 <div class="col-sm-4">
+					<input type="pic_withe" name="pic_withe" value="{$Think.config.pic_withe}" class="form-control"  placeholder="上传大小限制">*像素
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="pic_height" class="col-sm-2 control-label">缩略图片高:</label>
+				 <div class="col-sm-4">
+					<input type="pic_height" name="pic_height" value="{$Think.config.pic_height}" class="form-control"  placeholder="上传大小限制">*像素
+				 </div>
+			</div>
+			<p></p>
+			<button type="submit" class="btn btn-primary btn-lg"  >保 存</button>
+		</form>
+
+		
+	</div>
+</body>
+</html>

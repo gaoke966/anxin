@@ -1,0 +1,45 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+		<div class="diywap_right">
+		<div class="well well-sm">模板管理请注意使用UTF-8编码</div>
+			
+					
+						<?php 
+							$mulu=$_GET[_URL_];
+							//print_r($mulu);
+							$houzui=strrchr($mulu[5],'html');
+						if($houzui!='html'){
+							echo "<table class="."table table-hover table-bordered".">";
+							$dir =@opendir('./App/Tpl/'.$mulu[3].'/'.$mulu[4].'/'.$mulu[5].'/');//要打开的目录名；							
+							while(($file=readdir($dir))!=false){
+								if ($file!="." && $file!="..") {
+								
+								echo '<tr><td><a href=__GROUP__/Index/cssmoban/'.$mulu[3].'/'.$mulu[4].'/'.$mulu[5].'/'.$file.'>'.$file.'</a></td></tr>' ;
+								
+							}
+							echo "</label>";
+							fclose($dir);
+							}
+							}else{
+								$url='./App/Tpl/'.$mulu[3].'/'.$mulu[4].'/'.$mulu[5];
+								echo $url;
+								//$html=fopen($url,'r+');								
+								echo "
+								<form action='__GROUP__/Index/htmlmoban' method='post'>
+								<textarea style='width:80%; height:500px' name='moban'>".str_replace('__GROUP__','__AZAN__',htmlspecialchars(file_get_contents($url))).'</textarea>'.'<br /><input type=hidden name=path value='.$url.'><input class=btn btn-primary type=submit />'
+								;
+								
+							}
+					
+						
+						
+						
+					?>		
+					
+					
+			
+			</div>
+		</div>
+	</div>
+</body>
+</html>

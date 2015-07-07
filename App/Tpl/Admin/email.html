@@ -1,0 +1,52 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+
+<div class="diywap_right">
+		<div class="well well-sm">邮件提醒设置</div>
+		<form class="form-horizontal" name="webset" action="" method="post" />
+			<div class="form-group">
+			 <label for="smtp_host" class="col-sm-2 control-label">发送SMTP:</label>
+				 <div class="col-sm-4">
+					<input type="smtp_host" name="smtp_host" value="{$host}" class="form-control"  placeholder="发送SMTP">
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="smtp_port" class="col-sm-2 control-label">端口:</label>
+				 <div class="col-sm-4">
+					<input type="smtp_port" name="smtp_port" value="{$smtp_port}" class="form-control"  placeholder="端口">
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="from_email" class="col-sm-2 control-label">来自邮箱:</label>
+				 <div class="col-sm-4">
+					<input type="text"  value="{$from_email}" name="from_email"  class="form-control"  >
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="from_name" class="col-sm-2 control-label">邮件属名:</label>
+				 <div class="col-sm-4">
+					<input type="text"  value="{$from_name}" name="from_name"  class="form-control"  >
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="smtp_user" class="col-sm-2 control-label">发送邮箱:</label>
+				 <div class="col-sm-4">
+					<input type="text"  value="{$smtp_user}" name="smtp_user"  class="form-control"  >
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="smtp_pass" class="col-sm-2 control-label">邮箱密码:</label>
+				 <div class="col-sm-4">
+					<input type="text"  value="{$smtp_pass}" name="smtp_pass"  class="form-control"  >
+				 </div>
+			</div>
+			<button type="submit" class="btn btn-primary btn-lg"  >保 存</button>
+		</form>
+		<p></p>
+		
+		</div>
+
+		</div>
+	</div>
+</body>
+</html>

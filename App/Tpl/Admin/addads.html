@@ -1,0 +1,78 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+	<div class="diywap_right">
+		<div class="well well-sm">广告管理 <small>如果删除不成功请手动删除存放路径Public/Ads</small></div>
+				<table class="table table-hover table-bordered">
+				<?php 					
+						
+						$dir =@opendir('./Public/Ads/');
+						
+						while(($file = readdir($dir))!=false){
+						if ($file!="." && $file!=".." && $file!='Admin') {
+						
+						echo '<tr>
+						
+						<td>'.$file.'</td>
+						<td><a href=__GROUP__/Adsa/diao/fils/'.$file.'>'.'调用广告'.'</a></td>
+						<td><a href=__GROUP__/Adsa/delad/fils/'.$file. '>'.'删除广告'.'</a></td>
+						
+						
+						</tr>' ;
+							
+							
+						}
+						
+						}
+					
+						
+						
+					?>				
+				</table>
+				
+				<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+					添加广告
+				</button>
+
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">添加广告</h4>
+					  </div>
+					  <div class="modal-body">
+								<form action="" class="form-horizontal" method="post">
+									<div class="form-group">
+									 <label for="adname" class="col-sm-2 control-label">广告名称:</label>
+									 <div class="col-sm-4">
+									 <input  class="form-control input-sm" type="adname" name="adname" placeholder="请使用英文"/>
+									 </div>
+									</div>
+
+									<div class="form-group">
+									 <label for="remak" class="col-sm-2 control-label">广告内容:</label>
+									 <div class="col-sm-6">
+									 <textarea class="form-control" rows="3" name="remak" placeholder="可以是HTML代码，JS代码，图片链接代码，纯文本" /></textarea>
+									 </div>
+									</div>
+								
+								</form>
+		
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+						<button type="button" class="btn btn-primary" id="post">添加广告</button>
+					  </div>
+					</div><!-- /.modal-content -->
+				  </div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+				
+				<script type="text/javascript">
+$("#post").click(function(){
+	commonAjaxSubmit();
+});
+</script>
+		</div>
+	</div>
+</body>
+</html>

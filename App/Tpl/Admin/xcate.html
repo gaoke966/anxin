@@ -1,0 +1,74 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+<div class="diywap_right">
+		<div class="well well-sm">分类修改</div>
+
+<form class="form-horizontal" action="__GROUP__/Index/xcate" method="post" />
+			<div class="form-group">
+			 <label for="catename" class="col-sm-2 control-label">分类名称:</label>
+				 <div class="col-sm-4">
+					<input type="catename" name="catename"  class="form-control" value="{$cate.catename}"   placeholder="分类名称">
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="cateurl" class="col-sm-2 control-label">分类路径:</label>
+				 <div class="col-sm-4">
+					<input type="cateurl" name="cateurl" class="form-control" value="{$cate.cateurl}"  placeholder="分类路径">
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="catetitle" class="col-sm-2 control-label">分类标题(SEO):</label>
+				 <div class="col-sm-4">
+					<input type="catetitle" name="catetitle"  class="form-control"  value="{$cate.catetitle}" placeholder="分类标题(SEO)">
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="catekey" class="col-sm-2 control-label">分类关键词(SEO):</label>
+				 <div class="col-sm-4">
+					<input type="catekey" name="catekey"  class="form-control" value="{$cate.catekey}" placeholder="分类关键词(SEO)">
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="catedesc" class="col-sm-2 control-label">分类描述:</label>
+				 <div class="col-sm-4">
+					<textarea class="form-control" rows="3"  name="catedesc"   placeholder="分类描述(SEO)"> {$cate.catedesc}</textarea>
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="catetem" class="col-sm-2 control-label">分类模板:</label>
+				 <div class="col-sm-4">
+					<input type="catetem" name="catetem"  class="form-control" value="{$cate.catetem}"  placeholder="默认为空自动识别">
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="catepage" class="col-sm-2 control-label">分页数量:</label>
+				 <div class="col-sm-4">
+					<input type="catepage" name="catepage"  value="{$cate.catepage}" class="form-control">
+				 </div>
+			</div>
+			<div class="form-group">
+			 <label for="class" class="col-sm-2 control-label" >分类选择:</label>
+			 <label for="class" >
+				<input type="radio" value="0" <if condition="$cate.class eq 0">checked="checked"</if> name="class" />信息
+				
+			</label>
+			<label for="class" >
+			<input type="radio" value="1" <if condition="$cate.class eq 1">checked="checked"</if> name="class" />图片
+				</label>
+			</div>
+			<div class="form-group">
+			 <label for="catelogo" class="col-sm-2 control-label">分类图片:</label>
+				 <div class="col-sm-4">
+					<input type="catelogo" id="pcpic"  name="catelogo" class="form-control" value="{$cate.catelogo}" placeholder="分类图片">
+						<iframe src="__GROUP__/Index/pcupload" height="35" frameborder="0" scrolling="no" width="400" ></iframe>
+				 </div>
+			</div>
+			<input type="id" name="id"  class="hidden" value="{$cate.id}"   >
+			
+			<button type="submit" class="btn btn-primary btn-lg">保 存</button>
+			</form>
+			</div>
+			</div>
+
+</body>
+</html>

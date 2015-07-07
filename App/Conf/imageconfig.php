@@ -1,0 +1,1 @@
+<?php	return array ( 'pic_size' => '602000', 'pic_withe' => '600', 'pic_height' => '300', );?>

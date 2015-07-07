@@ -1,0 +1,88 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+	<div class="diywap_right">
+		<div class="well well-sm" >添加自定义菜单 <small>只能添加三个主菜单</small></div>
+			<table class="table table-striped">
+	
+	
+	  <form action="__GROUP__/Weixin/menu" method="post" >
+	  
+	  <tr></tr>
+	  <tr>
+			<td class="font12 col-sm-1">菜单名(name)：</td>
+			<td class="font12 col-sm-4 pull-left"><input type="text" class="form-control input-sm" name="name" id="name" placeholder="自定义菜单名不超过16个字节"></td>			
+	  </tr>
+	
+	  <tr>
+			<td class="font12 col-sm-1">菜单类型(type):</td>
+			<td class="font12 col-sm-6 pull-left">
+			<input type="checkbox" name="button" value="1" id="sub_button" <if condition="$pid neq null">disabled</if> >设置为主菜单(设置为主菜单之后后面的全部不用填然后返回增加子菜单)<br />
+			<input type="radio" name="type" value="click" id="click" >点击型(选择点击型的话要设置点击之后回复内容二选一)<br />
+			<input type="radio" name="type" value="view" checked  > 网页链接(选择这个的话可以不用选择下面的回复内容直接写url链接)</td>	
+	  </tr>
+	
+	  <tr>
+	  <td class="font12 col-sm-1">点击型回复内容(站内选择):</td>
+			<td>	
+						  
+							<label>条数</label>
+							<select name="num" id="num" class="form-control">
+							  <option >请选择回复数量</option>
+							  <option value="1">1</option>
+							  <option  value="2">2</option>
+							  <option  value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option  value="8">8</option>
+							  <option value="9">9</option>
+							  <option  value="10">10</option>
+							</select>
+						
+						 
+							<label>类型</label>
+							<select name="event" id="event1" class="form-control">
+							  <option >请选择回复内容</option>
+							  <option value="2">推荐信息列表</option>
+							  <option value="3">置顶信息列表</option>
+							  <option value="4">推荐图片列表</option>
+							  <option value="5">置顶图片列表</option>
+							  <option value="6">随机内容</option>
+							 
+							</select>
+						  
+					</td>
+	  </tr>
+	  <tr>
+			<td class="font12 col-sm-1">点击型回复内容(文本):</td>
+			<td class="font12 col-sm-4 pull-left"><textarea  type="text" class="form-control input-sm"  rows="3" id="text" name="text" placeholder="分类描述"></textarea></td>	
+	  </tr>
+	   <tr>
+			<td class="font12 col-sm-1">链接地址(url):</td>
+			<td class="font12 col-sm-4 pull-left"><input type="text" class="form-control input-sm" id="url" name="url" placeholder="跳转地址"></td>	
+	  </tr>
+	  <tr>
+			<td class="font12 col-sm-1">排序(sort):</td>
+			<td class="font12 col-sm-4 pull-left"><input type="text" class="form-control input-sm" id="sort" name="sort" value="100" placeholder="100">
+			<input type="hidden" class="form-control input-sm" id="pid" name="pid" value="{$pid}"></td>	
+	  </tr>
+	  
+				
+	  
+	 
+	</table>
+				
+				<div class="form-group">
+						<div class="col-sm-offset-3 col-sm-4">
+						  <button type="submit" class="btn btn-default" id="post">提交</button>
+						</div>
+				 </div>		
+				
+	</form>
+			
+
+		</div>
+	</div>
+</body>
+</html>

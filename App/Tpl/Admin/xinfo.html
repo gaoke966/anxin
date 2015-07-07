@@ -1,0 +1,151 @@
+<include file="./App/Tpl/Admin/header.html"/>	
+<include file="./App/Tpl/Admin/left.html"/>	
+<div class="diywap_right">
+		<div class="well well-sm">修改信息</div>
+		
+		
+	
+			<form action="__GROUP__/Index/xinfo" method="post"  class="form-horizontal" accept-charset="utf-8" />
+				<div class="form-group">
+					 <label for="title" class="col-sm-2 control-label">信息标题:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="title" name="title"  value="{$xinfo.title}" placeholder="信息标题"/>
+					 </div>
+				</div>
+			
+			<div class="form-group">
+				 <label for="title" class="col-sm-2 control-label">属性设置:</label>
+				 <div class="col-xs-2">
+				 <select type="mutiple" name="classtitle" class="form-control input-sm" placeholder=".col-xs-2">
+										
+												<option value="{$xinfo[classtitle]}" >{$xinfo[classtitle]}</option>
+											<volist name="showcate" id="vo">
+											<option value="{$vo.catename}">{$vo.catename}</option>											
+											</volist>										
+				</select>
+				</div>
+											<input class="xunze" type="checkbox" <if condition="$xinfo.istop eq 1">checked="checked"</if> value="1" name="istop" >置顶
+											<input class="xunze" type="checkbox" <if condition="$xinfo.isrec eq 1">checked="checked"</if> value="1" name="isrec" >推荐
+											<input class="xunze" type="checkbox" value="1" name="isshow" <if condition="$xinfo.isshow eq 1">checked="checked"</if> >验证
+											<input class="xunze" type="checkbox" value="1" name="isrev" <if condition="$xinfo.isrev eq 1">checked="checked"</if> >允许评论</td>
+			</div>
+			
+			<div class="form-group">
+				 <label for="infotitle" class="col-sm-2 control-label">SEO标题:</label>
+				 <div class="col-sm-4">
+					<input class="form-control input-sm" type="infotitle" name="infotitle" value="{$xinfo.infotitle}" />
+				 </div>
+			</div>
+			<div class="form-group">
+				<label for="infokey" class="col-sm-2 control-label">关键词:</label>
+				 <div class="col-sm-4">
+					<input class="form-control input-sm"  type="infokey" name="infokey" value="{$xinfo.infokey}" />(可作微信触发关键词,vip版有此功能)
+				 </div>
+			</div>
+			
+			
+		    <div class="form-group">
+				<label for="infokey" class="col-sm-2 control-label">微信外链网址:</label>
+				 <div class="col-sm-4">
+					<input class="form-control input-sm"  type="text" name="custom_url" value="{$xinfo.custom_url}" />
+				 </div>
+			</div>	
+			
+
+			
+			<div class="form-group">
+				<label for="infodesc" class="col-sm-2 control-label">信息描述:</label>
+				 <div class="col-sm-4">
+				<textarea class="form-control" rows="3" name="infodesc" />{$xinfo.infodesc}</textarea>
+				</div>
+			
+			</div>
+			<div class="form-group">
+				<label for="content" class="col-sm-2 control-label">内容:</label>
+				 <div class="col-sm-8">
+				<textarea class="form-control" rows="3" style="width:100%; height:300px;" name="content" id="content"  >{$xinfo.content}</textarea>
+				<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor.js"></script>
+						<script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+						<script>
+								KindEditor.ready(function(K) {
+										window.editor = K.create('#content');
+								});
+						
+						</script>	
+				</div>
+			
+			</div>
+				
+			<div class="form-group">
+				<label for="ispic" class="col-sm-2 control-label">缩略图:</label>
+				 <div class="col-sm-4">
+				<input type="text" class="form-control input-sm" name="ispic" value="{$xinfo.ispic}" id="ispic" />
+				<iframe src="__GROUP__/Index/upimg" height="35" frameborder="0" scrolling="no" width="400" ></iframe>
+				</div>
+			</div>	
+			
+
+
+			<div class="form-group">
+				<label for="author" class="col-sm-2 control-label">作者:</label>
+				<div class="col-sm-4">
+				<input type="text" name="author" class="form-control input-sm" value="{$xinfo.author}" />
+				</div>
+			</div>	
+			<div class="form-group">
+				<label for="from" class="col-sm-2 control-label">来源:</label>
+				<div class="col-sm-4">
+				<input type="text" class="form-control input-sm"   value="{$xinfo.from}" name="from" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="hits" class="col-sm-2 control-label">人气:</label>
+				<div class="col-sm-4">
+				<input type="text"  value="{$xinfo.hits}" class="form-control input-sm" name="hits" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="time" class="col-sm-2 control-label">时间:</label>
+				<div class="col-sm-4">
+				<input type="text"  value="{$xinfo.time}" class="form-control input-sm" name="time" />
+				</div>
+				
+			</div>
+			<div class="form-group">
+				<label for="url" class="col-sm-2 control-label">路径:</label>
+				<div class="col-sm-4">
+				<input type="text" class="form-control input-sm" name="url" value="{$xinfo.url}" />.html*默认以标题的首字母，默认不用填
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="pcurl" class="col-sm-2 control-label">价格:</label>
+				<div class="col-sm-4">
+				<input type="text"  value="{$xinfo.pcurl}" name="pcurl" class="form-control input-sm" />*如果需要可以在这里写
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="phoneurl" class="col-sm-2 control-label">单位:</label>
+				<div class="col-sm-4">
+				<input type="text"  value="{$xinfo.phoneurl}"  name="phoneurl" class="form-control input-sm" />*如果需要可以在这里写
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="infotemp" class="col-sm-2 control-label">显示模板:</label>
+				<div class="col-sm-4">
+				<input type="text"  value="{$xinfo.infotemp}" name="infotemp" class="form-control input-sm" />*默认不填
+				</div>
+			</div>
+			<input type="id" name="id"  class="hidden" value="{$xinfo.id}"   >
+			 	<button type="submit" class="btn btn-primary btn-lg">保 存 修 改</button>
+			 
+			</form>
+		<p></p>
+		</div>
+	</div>
+		
+		
+		
+		
+	
+</body>
+</html>

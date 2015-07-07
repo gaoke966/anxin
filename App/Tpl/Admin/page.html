@@ -1,0 +1,110 @@
+<include file="./App/Tpl/Admin/header.html"/>	
+<include file="./App/Tpl/Admin/left.html"/>	  
+<script type="text/javascript" src="__PUBLIC__/ckeditor/ckeditor.js"></script>
+
+<div class="diywap_right">
+		<div class="well well-sm">添加单页</div>
+
+	
+			<form action="__GROUP__/Index/page" method="post" class="form-horizontal" accept-charset="utf-8" />
+			<div class="form-group">
+					 <label for="title" class="col-sm-2 control-label">信息标题:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="title" name="title" placeholder="信息标题"/>
+					 </div>
+			</div>
+			<div class="form-group">
+					 <label for="infotitle" class="col-sm-2 control-label">SEO标题:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="infotitle" name="infotitle" placeholder="SEO标题"/>
+					 </div>
+			</div>	
+			<div class="form-group">
+					 <label for="infokey" class="col-sm-2 control-label">关键词:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="infokey" name="infokey" placeholder="关键词"/>
+					 </div>
+			</div>	
+			<div class="form-group">
+					 <label for="infodesc" class="col-sm-2 control-label">信息描述:</label>
+					 <div class="col-sm-4">
+					 <textarea class="form-control" rows="3" name="infodesc" placeholder="信息描述"/></textarea>
+					 </div>
+			</div>				
+			<div class="form-group">
+					 <label for="content" class="col-sm-2 control-label">信息内容:</label>
+					 <div class="col-sm-8">
+			
+				<textarea name="content" class="form-control" id="content" style="width:100%; height:300px;"></textarea>
+						<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor.js"></script>
+						<script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+						<script>
+								KindEditor.ready(function(K) {
+										window.editor = K.create('#content');
+								});
+						
+						</script>	
+				</div>
+			</div>
+			<div class="form-group">
+					 <label for="pcpic" class="col-sm-2 control-label">缩略图:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="pcpic" id="pcpic" name="pcpic" placeholder="缩略图"/>
+					 <iframe src="__GROUP__/Index/pcupload" height="35" frameborder="0" scrolling="no" width="400" ></iframe>
+					 </div>
+			</div>
+			
+			<div class="form-group">
+					 <label for="author" class="col-sm-2 control-label">作者:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="author" name="author" value="{$Think.config.webname}" placeholder="作者"/>
+					
+					 </div>
+			</div>
+			<div class="form-group">
+					 <label for="author" class="col-sm-2 control-label">人气:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="hits" name="hits" value="{$hits}" placeholder="作者"/>
+					
+					 </div>
+			</div>
+			<div class="form-group">
+					 <label for="time" class="col-sm-2 control-label">时间:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="hits" name="time" value="{$time}" placeholder="作者"/>
+					
+					 </div>
+			</div>
+			<div class="form-group">
+					 <label for="url" class="col-sm-2 control-label">路径:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="text" name="url"  placeholder="默认以标题的首字母命名"/>
+					
+					 </div>
+			</div>
+			<div class="form-group">
+					 <label for="outurl" class="col-sm-2 control-label">外部链接:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="outurl" name="outurl"  placeholder="如果需要跳转到别的链接请填写"/>
+					
+					 </div>
+			</div>
+			<div class="form-group">
+					 <label for="pagetem" class="col-sm-2 control-label">前台模板:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="pagetem" name="pagetem"  placeholder="默认自动识别"/>
+					
+					 </div>
+			</div>
+			
+			
+			 	<button type="submit" class="btn btn-primary btn-lg">保 存</button>
+		
+			</form>
+		<p></p>
+		<p></p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

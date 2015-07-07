@@ -1,0 +1,21 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+	<div class="diywap_right">
+		<form action="__GROUP__/Index/reply" class="form-horizontal" method="post">
+					
+						<textarea name="reply" class="form-control" placeholder="回复写在这" >{$commen['reply']}</textarea><br />
+						<input type="hidden" name="isshow" value="1" />				
+						ID<input   class="form-control input-sm" type="type" name="id" value="{$commen['id']}" />				
+						称呼<input  class="form-control input-sm" type="type" name="name" value="{$commen['name']}" />				
+						E-mail<input   class="form-control input-sm" type="type" name="email" value="{$commen['email']}" />				
+						主页<input  class="form-control input-sm" type="type" name="homepage" value="{$commen['homepage']}" />				
+						内容<input  class="form-control input-sm" type="type" name="connent" value="{$commen['connent']}" />				
+						文章路径<input   type="type"  class="form-control input-sm" name="url" value="{$commen['url']}" />				
+						时间<input type="type"  class="form-control input-sm" name="time" value="{$commen['time']}" />				
+						
+						<button type="submit" class="btn btn-primary btn-lg">保 存</button>
+		</form>
+</div>
+	</div>
+</body>
+</html>

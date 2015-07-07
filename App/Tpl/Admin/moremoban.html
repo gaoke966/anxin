@@ -1,0 +1,32 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+		<div class="diywap_right">
+		<div class="well well-sm">模板管理请注意使用UTF-8编码</div>
+					<table class="table table-hover table-bordered">
+					
+						<?php 
+						$mulu=$_GET['_URL_'];
+						//print_r($mulu);
+						echo '<h4>文件列表</h4>';
+						$dir =@opendir('./App/Tpl/'.$mulu[3].'/'.$mulu[4].'/');//要打开的目录名；
+						while(($file = readdir($dir))!=false){
+						if ($file!="." && $file!="..") {
+							
+							echo '<tr><td>'.$name.'<a href=__GROUP__/Index/htmlmoban/'.$mulu[3].'/'.$mulu[4].'/'.$file.'>'.$file.'</a></td></tr>' ;
+							
+							
+						}
+					
+						}
+					
+					
+						
+					?>		
+					
+					
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+	<div class="diywap_right">
+		<div class="well well-sm">分类管理</div>
+					<table class="table table-hover table-bordered">
+					<tr>
+					<th>ID</th>
+					<th>分类名称</th>
+					<th>类型</th>
+					<th>操作</th>
+					</tr>
+					<volist name="cate" id="vo">
+ 					<tr class="active">
+					<td>{$vo.id}</td>
+					<td><a href="__ROOT__/{$vo.cateurl}">{$vo.catename}</a></td>
+					<td><if condition="$vo.class eq 1">图片<else/>文字</if></td>
+					<td><a href="__GROUP__/Index/xcate/id/{$vo.id}">管理</a> | <a href="__GROUP__/Index/delcate/id/{$vo.id}" onclick='return confirm("真的要删除?不可恢复!");'>删除</a></td>
+					</tr>
+					</volist>
+					
+				</table>
+			</div>
+		
+</div>
+</body>
+</html>

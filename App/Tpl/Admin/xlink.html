@@ -1,0 +1,35 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+	<div class="diywap_right">
+		<div class="well well-sm">友情链接修改</div>
+			
+				<form action="__GROUP__/Index/xlink" class="form-horizontal" method="post">
+					
+					<div class="form-group">
+					 <label for="url" class="col-sm-2 control-label">域名:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="url" name="url" value="{$xlink[url]}" />
+					 </div>
+					</div>
+					<input type="hidden" name="id" value="{$xlink[id]}" />
+					<div class="form-group">
+					 <label for="name" class="col-sm-2 control-label">名称:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="name" name="name" value="{$xlink[name]}" />
+					 </div>
+					</div>
+					<div class="form-group">
+					 <label for="remak" class="col-sm-2 control-label">备注:</label>
+					 <div class="col-sm-4">
+					 <textarea class="form-control" rows="3" name="remak" placeholder="备注信息"/>{$xlink[remak]}</textarea>
+					 </div>
+					</div>
+						<button type="submit" class="btn btn-primary btn-lg">保 存</button>
+				</form>
+		
+				
+			
+		</div>
+	</div>
+</body>
+</html>

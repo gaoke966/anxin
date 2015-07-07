@@ -1,0 +1,55 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+<div class="diywap_right">
+		<div class="well well-sm">查看信息
+		<a href="__GROUP__/Index/seeinfo/cid/1">图片列表</a>
+				<a href="__GROUP__/Index/seeinfo/cid/0">文章列表</a>
+				<a href="__GROUP__/Index/seeinfo/isrec/1">已推荐</a>
+				<a href="__GROUP__/Index/seeinfo/istop/1">已置顶</a>
+				<a href="__GROUP__/Index/seeinfo/isrev/1">允许评论</a>
+			
+		</div>
+		 <table class="table table-hover table-bordered">
+		
+			<tr class="active">
+			  <td>ID</td>
+			  <td >标题</td>
+			  <td>评论</td>
+			  <td >人气</td>
+			  <td>评论</td>
+			  <td>图/文</td>
+			  <td>类别</td>
+			  <td>状态</td>
+			  <td>管理</td>
+			  <td>时间</td>
+			</tr>
+			<volist name="list" id="vo">
+			 <tr>
+			  <td class="font12">{$vo.id}</td>
+			  <td class="font12"><a href="__ROOT__{$vo.url}" target="_blank"  class="text-overflow">{$vo.title|msubstr=###,0,14,'utf-8',false}</a></td>
+			  <td class="font12">{$vo.revs}</td>
+			  <td class="font12">{$vo.hits}</td>
+			  <td class="font12"><span class="c9"><if condition="$vo.isrev eq 0">否</span><else/>是</if></td>
+			  <td class="font12"><if condition="$vo.cid eq 1"><a href="__GROUP__/Index/seeinfo/cid/1">图片</a><else/><a href="__GROUP__/Index/seeinfo/cid/0">文章</a></if></td>
+			  <td class="font12"><a href="__GROUP__/Index/seeinfo/classtitle/{$vo.classtitle}">{$vo.classtitle}</a></td>
+			  <td class="font12"><if condition="$vo.isshow eq 1">已验证<else/><span class="c9">未验证</span></if>&nbsp;<if condition="$vo.isrec eq 1"><a href="__GROUP__/Index/seeinfo/isrec/1">已推荐</a><else/><span class="c9"><a href="__GROUP__/Index/seeinfo/isrec/0">未推荐</a></if></span>&nbsp;<if condition="$vo.istop eq 1"><a href="__GROUP__/Index/seeinfo/istop/1">已置顶</a><else/><span class="c9"><a href="__GROUP__/Index/seeinfo/istop/0">未置顶</a></if></span></td>
+			  <td class="font12"><a href="__GROUP__/Index/xinfo/id/{$vo.id}">编辑</a> <a href="__GROUP__/Index/delinfo/id/{$vo.id}" onclick='return confirm("真的要删除?不可恢复!");'>删除</a></td>
+			  <td class="font12">{$vo.time}</td>
+			</tr>
+			</volist>
+			
+
+			
+		</table>
+		
+				<ul class="pagination">{$page}</ul>
+		
+		
+		</div>
+			
+
+
+		</div>
+		</div>
+		</body>
+		</html>

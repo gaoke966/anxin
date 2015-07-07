@@ -1,0 +1,172 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+
+
+function mobile_device_detect(url)
+
+{
+
+
+
+        var thisOS=navigator.platform;
+
+
+
+        var os=new Array("iPhone","iPod","iPad","android","Nokia","SymbianOS","Symbian","Windows Phone","Phone","Linux armv71","MAUI","UNTRUSTED/1.0","Windows CE","BlackBerry","IEMobile");
+
+
+
+	for(var i=0;i<os.length;i++)
+
+        {
+
+
+
+	if(thisOS.match(os[i]))
+
+        {			
+
+		window.location=url; 
+
+	}
+
+		
+
+	}
+
+
+
+
+
+	//因为相当部分的手机系统不知道信息,这里是做临时性特殊辨认
+
+	if(navigator.platform.indexOf('iPad') != -1)
+
+        {
+
+		window.location=url;
+
+	}
+
+
+
+	//做这一部分是因为Android手机的内核也是Linux 
+
+	//但是navigator.platform显示信息不尽相同情况繁多,因此从浏览器下手，即用navigator.appVersion信息做判断
+
+	 var check = navigator.appVersion;
+
+
+
+	 if( check.match(/linux/i) )
+
+          {
+
+		 //X11是UC浏览器的平台 ，如果有其他特殊浏览器也可以附加上条件
+
+		 if(check.match(/mobile/i) || check.match(/X11/i)) 
+
+                 { 
+
+			window.location=url;
+
+		 }   
+
+	}
+
+
+
+	//类in_array函数
+
+	Array.prototype.in_array = function(e)
+
+	{ 
+
+		for(i=0;i<this.length;i++)
+
+		{
+
+			if(this[i] == e)
+
+			return true;
+
+		}
+
+		return false;
+
+	}
+
+}
+
+
+<?php
+	$aa = C("APP_SUB_DOMAIN_RULES");
+	$domain = '';
+	$aa = array_keys($aa);
+	if(is_array($aa)){
+		$wap = $aa[0];
+		$domain = preg_replace('/([^\.]+)\.(.+)/i', $wap.".$2", $_SERVER['SERVER_NAME']);
+		echo 'mobile_device_detect("http://'.$domain.'");';
+	}
+?>
+
+
+
+
+
+
+</SCRIPT>
+
+
+
+<div class="wrap">
+
+         <!-- Header Start -->
+
+         <header id="header">
+
+            <!-- Header Top Bar Start -->
+
+            <div class="top-bar">
+
+               <div class="slidedown collapse">
+
+                  <div class="container">
+
+                     <div class="phone-email pull-left">
+
+                        <a><i class="icon-volume-up icon-2x"></i> 欢迎来到{$webname}!</a>
+
+
+                     </div>
+
+                     <div class="pull-right">
+
+                        <ul class="social pull-left">
+
+                          <div class="bdsharebuttonbox"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_mshare" data-cmd="mshare" title="分享到一键分享"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+                        </ul>
+
+                       
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+            <!-- Header Top Bar End -->
+
+           
+               </div>
+
+            </div>
+
+            <!-- Main Header End -->
+
+         </header>

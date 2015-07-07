@@ -1,0 +1,34 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+	<div class="diywap_right">
+		<div class="well well-sm">模板管理</div>
+					<table class="table table-hover table-bordered">
+					<?php 					
+						
+						$dir =@opendir('App/Tpl/');//要打开的目录名；
+							echo '<h4>手机和电脑模板</h4>';
+						while(($file = readdir($dir))!=false){
+						if ($file!="." && $file!=".." && $file!='Admin') {
+						
+								echo '<tr><td>';								
+								if($file == 'Home'){
+									echo '电脑模板';
+								}elseif($file == 'Wap'){
+									echo '手机模板';
+								}								
+								echo '<a href=__GROUP__/Index/fenzu/'.$file.'>'.$file.'</a></td></tr>' ;							
+							
+						}
+						
+						}
+					
+						
+						
+					?>				
+					
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+	<div class="diywap_right">
+		<div class="well well-sm" >微信管理 <small>用户关注时自动回复内容</small></div>
+			<h3>已添加</h3>
+			<volist name="list" id="list" >
+			<div class="row">				
+			<div class="col-lg-6">			
+			  <form action="" class="form-inline" method="post">
+				<div class="input-group input-group-lg">
+			
+				  <span class="input-group-addon input-sm">	
+							<select name="event" class="form-control">
+							  <option <if condition="$list['event'] eq 2"> selected="selected"</if> value="2">推荐信息列表</option>
+							  <option <if condition="$list['event'] eq 3"> selected="selected"</if> value="3">置顶信息列表</option>
+							  <option <if condition="$list['event'] eq 4"> selected="selected"</if> value="4">推荐图片列表</option>
+							  <option <if condition="$list['event'] eq 5"> selected="selected"</if> value="5">置顶图片列表</option>
+							 
+							</select>
+				  </span>
+				  <span class="input-group-addon input-sm">
+							<label>条数</label>
+							<select name="num" class="form-control input-sm">
+							  <option <if condition="$list['num'] eq 1"> selected="selected"</if> value="1">1</option>
+							  <option <if condition="$list['num'] eq 2"> selected="selected"</if> value="2">2</option>
+							  <option <if condition="$list['num'] eq 3"> selected="selected"</if> value="3">3</option>
+							  <option <if condition="$list['num'] eq 4"> selected="selected"</if> value="4">4</option>
+							  <option <if condition="$list['num'] eq 5"> selected="selected"</if> value="5">5</option>
+							  <option <if condition="$list['num'] eq 6"> selected="selected"</if> value="6">6</option>
+							  <option <if condition="$list['num'] eq 7"> selected="selected"</if> value="7">7</option>
+							  <option <if condition="$list['num'] eq 8"> selected="selected"</if> value="8">8</option>
+							  <option <if condition="$list['num'] eq 9"> selected="selected"</if> value="9">9</option>
+							  <option  <if condition="$list['num'] eq 10"> selected="selected"</if> value="10">10</option>							 
+							</select>		
+				  </span>
+				
+				  <input type="text" style="width:300px;" class="form-control input-lg" name="keys" value="{$list.keys}" placeholder="关键词">	
+				  <input type="hidden"  name="id" value="{$list.id}" placeholder="关键词">	
+				<span class="input-group-btn input-group-lg">
+				<button class="btn btn-default input-group-lg" type="submit">修改</button>
+				<button class="btn btn-default input-group-lg" ><a href="__GROUP__/Weixin/delevent/id/{$list.id}">删除</a></button>
+				</span>
+			  </form>
+				</div><!-- /input-group -->
+			  </div><!-- /.col-lg-6 -->
+				
+		</div><br />
+		</volist>
+		
+		<h3 id="show">添加回复信息</h3>
+			
+			<div class="row">
+				
+			
+			  <div class="col-lg-6">
+			  <form action="" class="form-inline" method="post">
+				<div class="input-group input-group-lg">
+				  <span class="input-group-addon input-sm">
+							<select name="event" id="event" class="form-control">
+							  <option  value="2">推荐信息列表</option>
+							  <option  value="3">置顶信息列表</option>
+							  <option  value="4">推荐图片列表</option>
+							  <option  value="5">置顶图片列表</option>
+							 
+							</select>
+				  </span>
+				  <span class="input-group-addon input-sm">
+							<label>条数</label><select name="num" id="num" class="form-control input-sm">
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option value="8">8</option>
+							  <option value="9">9</option>
+							  <option value="10">10</option>
+							 
+							</select>		
+				  </span>
+				
+				  <input type="text" style="width:300px;" class="form-control input-lg" name="keys" id="keys"  placeholder="关键词">	
+				<span class="input-group-btn input-group-lg">
+				<button class="btn btn-default input-group-lg" id="sub" type="button">添加</button>
+				</span>
+			  </form>
+				</div><!-- /input-group -->
+			  </div><!-- /.col-lg-6 -->
+			</div>
+				
+						
+				
+			
+			
+<script>
+$(document).ready(function(){
+  $("#sub").click(function(){
+    $.post("index.php?s=/admin/Weixin/huifu",
+    {
+      event:$("#event").val(),
+      num:$("#num").val(),
+      keys:$("#keys").val(),
+  
+    },
+    function(data){
+    
+	$("#show").html(data);
+	
+	
+
+   });
+  });
+  $("#sub1").click(function(){
+	$.post("index.php?s=/admin/Weixin/event",
+	 {
+      event:$("#event1").val(),
+      post:$("#post").val(),
+      num:$("#num").val(),
+  
+    },
+	 function(data){
+    
+	$("#show1").html(data);
+	
+	
+
+   });
+  
+  })
+});
+</script>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+	<div class="diywap_right">
+		<div class="well well-sm">分类管理</div>
+					<table class="table table-hover table-bordered">
+			<tr>
+			  <td >ID</td>
+			  <td >标题</td>			 
+			  <td>管理</td>
+			  <td >时间</td>
+			</tr>
+			<volist name="list" id="vo">
+			 <tr style="background:#ffffff;">
+			  <td >{$vo.id}</td>
+			  <td ><a href="__ROOT__{$vo.url}" target="_blank">{$vo.title}</a></td>			 
+			  <td><a href="__GROUP__/Index/xpage/id/{$vo.id}">编辑</a> <a href="__GROUP__/Index/delpage/id/{$vo.id}" onclick='return confirm("真的要删除?不可恢复!");'>删除</a></td>
+			  <td>{$vo.time}</td>
+			</tr>
+			</volist>
+		
+
+			
+		</table>
+		<ul class="pagination">{$page}</ul>
+		</div>
+			
+
+
+		</div>
+		</div>
+		</body>
+		</html>

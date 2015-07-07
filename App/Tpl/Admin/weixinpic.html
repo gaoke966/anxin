@@ -1,0 +1,20 @@
+<include file="./App/Tpl/Admin/header.html"/>	
+<include file="./App/Tpl/Admin/left.html"/>	  
+
+
+<div class="diywap_right">
+		<div class="well well-sm">微信图片列表</div>		
+			<div class="row">
+			<volist name="weixinpic" id="vo">				 <div class="col-lg-3">
+								<img class="img-rounded" src="{$vo.image}" height="300" width="190" >	
+					 					 					  						<div class="input-group"> 						<form  action="/admin/Index/weixinpic" method="post" >													<input type="text" name="name" value="{$vo.name}" class="form-control">							<input type="hidden" class="form-control" name="id" value="{$vo.id}">								<input type="hidden" class="form-control" name="userid" value="{$vo.userid}">								<input type="hidden" class="form-control " name="hits" value="{$vo.hits}">								<input type="hidden" class="form-control" name="revs" value="{$vo.revs}">								<input type="hidden" class="form-control" name="isshow" value="1">								<input type="hidden" class="form-control" name="image" value="{$vo.image}">							  <span class="input-group-btn">							<button class="btn btn-default" type="submit">修改</button>						  </span>						  											</form>												</div><!-- /input-group -->					                   
+						<a href="/admin/Index/wxshow/id/{$vo.id}" class="btn btn-primary btn-sm"><if condition="$vo.isshow eq 0">验证<else />已验证</if></a>						<a href="/admin/Index/delweixinpic/id/{$vo.id}" class="btn btn-primary btn-sm">删除</a>
+					  </div>  
+				
+			</volist>
+			</div>		
+			<ul class="pagination">{$page}</ul>
+</div>
+
+</body>
+</html>

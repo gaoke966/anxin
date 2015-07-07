@@ -1,0 +1,103 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+	<div class="diywap_right">
+		<div class="well well-sm" >微信管理 <small>用户关注时自动回复内容</small></div>
+				<table class="table table-hover table-bordered">
+			
+					<tr>
+						<th id="show">文字回复内容</th> 
+						<th>操作</th>
+					</tr>
+					<tr>
+					<form action="" class="form-horizontal" method="post">
+						<tr><input type="hidden"  name="event" id="event" value="1" />
+						<td>
+						<textarea class="form-control" name="post" id="post" rows="3">{$list['0']['post']}</textarea>
+						</td>
+						<td>
+						<button class="btn btn-primary btn-lg" type="button" id="sub">
+							修改
+						</button>
+					
+					</form>
+						</td>
+					</tr>
+				
+				</table>
+				
+				<!--
+				<h3 id="show1">图文列表内容</h3>
+				
+						<form class="form-inline" role="form">
+						  <div class="form-group">
+							<label>条数</label>
+							<select name="num" id="num" class="form-control">
+							  <option <if condition="$list['0']['num'] eq 1"> selected="selected"</if> value="1">1</option>
+							  <option <if condition="$list['0']['num'] eq 2"> selected="selected"</if> value="2">2</option>
+							  <option <if condition="$list['0']['num'] eq 3"> selected="selected"</if> value="3">3</option>
+							  <option <if condition="$list['0']['num'] eq 4"> selected="selected"</if> value="4">4</option>
+							  <option <if condition="$list['0']['num'] eq 5"> selected="selected"</if> value="5">5</option>
+							  <option <if condition="$list['0']['num'] eq 6"> selected="selected"</if> value="6">6</option>
+							  <option <if condition="$list['0']['num'] eq 7"> selected="selected"</if> value="7">7</option>
+							  <option <if condition="$list['0']['num'] eq 8"> selected="selected"</if> value="8">8</option>
+							  <option <if condition="$list['0']['num'] eq 9"> selected="selected"</if> value="9">9</option>
+							  <option  <if condition="$list['0']['num'] eq 10"> selected="selected"</if> value="10">10</option>
+							</select>
+						  </div>	
+						    <div class="form-group">
+							<label>类型</label>
+							<select name="event" id="event1" class="form-control">
+							  <option <if condition="$list['0']['event'] eq 2"> selected="selected"</if> value="2">推荐信息列表</option>
+							  <option  <if condition="$list['0']['event'] eq 3"> selected="selected"</if> value="3">置顶信息列表</option>
+							  <option  <if condition="$list['0']['event'] eq 4"> selected="selected"</if> value="4">推荐图片列表</option>
+							  <option  <if condition="$list['0']['event'] eq 5"> selected="selected"</if> value="5">置顶图片列表</option>
+							 
+							</select>
+						  </div>
+						 
+						  <button type="button" class="btn btn-default" id="sub1">提交</button>
+						</form>
+					-->
+				
+			
+			
+<script>
+$(document).ready(function(){
+  $("#sub").click(function(){
+    $.post("index.php?s=/admin/Weixin/event",
+    {
+      event:$("#event").val(),
+      post:$("#post").val(),
+  
+    },
+    function(data){
+    
+	$("#show").html(data);
+	
+	
+
+   });
+  });
+  $("#sub1").click(function(){
+	$.post("index.php?s=/admin/Weixin/event",
+	 {
+      event:$("#event1").val(),
+      post:$("#post").val(),
+      num:$("#num").val(),
+  
+    },
+	 function(data){
+    
+	$("#show1").html(data);
+	
+	
+
+   });
+  
+  })
+});
+</script>
+		</div>
+	</div>
+</body>
+</html>

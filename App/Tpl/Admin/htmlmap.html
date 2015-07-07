@@ -1,0 +1,45 @@
+<include file="./App/Tpl/Admin/header.html"/>	
+<include file="./App/Tpl/Admin/left.html"/>	
+<div class="diywap_right">
+		<div class="well well-sm">模板管理请注意使用UTF-8编码</div>
+		<form action="__GROUP__/Sitemap/index" method="post" >
+		<textarea class='dmoban' style='width:80%; height:500px' name="sitemap">	
+		
+			<volist name="cate" id="cate" >					
+					
+					<url>
+					<loc>{$web}/{$cate.cateurl}</loc>				
+					<changefreq>daily</changefreq>					
+					<priority>0.8</priority>
+					</url>
+					
+			</volist>
+			<volist name="info" id="info" >				
+					
+					<url>
+					<loc>{$web}{$info.url}</loc>
+					<lastmod>{$info.time}</lastmod>
+					<changefreq>daily</changefreq>
+					<priority>0.5</priority>
+					</url>
+					
+			</volist>
+			<volist name="page" id="page" >				
+					
+					<url>
+					<loc>{$web}{$page.url}</loc>
+					<lastmod>{$page.time}</lastmod>
+					<changefreq>daily</changefreq>
+					<priority>0.7</priority>
+					</url>
+					
+			</volist>
+			</urlset>
+			</textarea>
+				<input type="submit" value="生成"> 生成在根目录的sitemap.xml
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

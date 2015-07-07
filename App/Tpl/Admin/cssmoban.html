@@ -1,0 +1,32 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+	<div class="diywap_right">
+		<div class="well well-sm">模板管理</div>
+				<ul>
+					
+						<?php 
+							$mulu=$_GET[_URL_];
+								//print_r($mulu);
+						
+								$url='./App/Tpl/'.$mulu[3].'/'.$mulu[4].'/'.$mulu[5].'/'.$mulu[6];
+								echo $url;
+								//$html=fopen($url,'r+');								
+								echo "
+								<form action='__GROUP__/Index/cssmoban' method='post' charset=utf-8>
+								<textarea class='dmoban' style='width:80%; height:500px' name='moban'>".file_get_contents($url).'</textarea>'.'<input type=hidden name=path value='.$url.'><input type=submit />'
+								;
+								
+					
+					
+						
+						
+						
+					?>		
+					
+					
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

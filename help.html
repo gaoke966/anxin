@@ -1,0 +1,267 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>lanren帮助中心</title>
+<link href="http://diy.lanrenmb.com/App/Tpl/Admin/style/css.css"  rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="http://diy.lanrenmb.com/App/Tpl/Home/azan/js/jquery.js"></script>
+<style>
+body{line-height:25px;}	
+	dd{width:100%; float:left; line-height:50px;}
+	h3{padding:0 2%;}
+</style>
+
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<img src="http://diy.lanrenmb.com/App/Tpl/Admin/style/img/logo.png" />
+			</div>
+			<div class="banner">
+			
+			</div>
+			<div class="tools">		
+				<a href="#" target="_blank">网站首页</a>			
+				<a href="#" target="_blank">技术支持官方网站</a>
+			</div>
+		</div>		
+<div class="main">	
+<div class="left">
+			<dl>
+				<dt>系统介绍</dt>
+				<dd><a href="#huanjin">环境要求</a></dd>
+				<dd><a href="#anzhuang">系统安装</a></dd>
+				<dd><a href="#shezhi">系统管理</a></dd>
+				<dd><a href="#info">信息管理</a></dd>
+				<dd><a href="#fujia">附加功能管理</a></dd>				
+				<dt>标签说明</dt>	
+				<dd><a href="#tags">全局标签</a></dd>
+				<dd><a href="#xunhuan">动态/循环标签</a></dd>		
+				<dd><a href="#xinxi">信息页专用标签</a></dd>
+				<dd><a href="#danye">单页专用标签</a></dd>					
+				<dd><a href="#reply">评论列表标签</a></dd>					
+				<dd><a href="#"></a></dd>					
+				<dd><a href="#">官网：www.lanrenmb.com</a></dd>					
+				
+			</dl>
+		</div>
+		<div class="right" style="font-size:12px; ">	
+			
+					<h3>程序介绍</h3>
+					<font color="blue">懒人DIY</font>是一套免费的PHP+MYSQL手机网站系统，系统主要实现了手机网站和电脑网站同步后台管理，同时内置了两个分组手机和普通PC端。对应的前台模板也是同样的有两个不同的版本。同时还实现了多套模板自由切换，可以到<a href="http://www.lanrenmb.com">www.lanrenmb.com</a>下载模板！<br />
+					同时还有邮件实时提醒功能，只要网站有评论和留言都会第一时间发送邮件到邮箱，从而第一时间了解网站用户对网站做的评论和留言！只需要在后台简单的设置好发送邮箱就可以。<br />
+					<font color="blue">懒人DIY</font>为了满足不同服务器的要求准备了四种URL模式供用户选择，可以运行在Apache、IIS和nginx在内的多种WEB服务器.<br />
+					
+					意见反馈QQ群:<font color="red">347882616</font>
+					
+				
+					<h3><a  name="huanjin">环境要求</a></h3>
+				懒人DIY可以支持Windows/Unix服务器环境，需要PHP5.2.0以上版本支持，可运行于包括Apache、IIS和nginx在内的多种WEB服务器和模式，支持Mysql数据库和连接。框架本身没有什么特别模块要求，具体的应用系统运行环境要求视开发所涉及的模块。ThinkPHP底层运行的内存消耗极低，而本身的文件大小也是轻量级的，因此不会出现空间和内存占用的瓶颈。
+				
+				
+					<h3><a name="anzhuang">系统安装</a></h3>
+					<font color="#f60">准备工作</font><br />
+				　　○ 为保证程序完整性和安全性请至官网(www.lanrenmb.com)下载最新版本；<br />
+				　　○ 准备好符合懒人DIY正常使用的运行环境（PHP+MYSQL）。<br />
+						<font color="#f60">系统安装</font><br />
+						<dd><font color="#f60">○第一步：</font>将程序包放入根目录后通过浏览器运行网站，如：http://127.0.0.1(初次运行时，系统会自动转入到安装目录)；<br /></dd>
+					　	<dd><font color="#f60">○第二步：</font>根据页面提示填写相关配置内容<br /></dd>
+					　	<dd><font color="#f60">○第三步：</font>如无错误提示，请点“下一步”按钮；<br /></dd>
+					　　<dd><font color="#f60">○第四步：</font>系统会自动将数据库导入到MYSQL中显示安装完成即可关闭<br /></dd>
+					　　<dd><font color="#f60">○第五步：</font>为了系统安全请正确安装完成后删除install目录！<br /></dd>						
+					<h3><a  name="shezhi">系统管理</a></h3>
+						<font color="#f60">系统设置</font><br />
+						分为：网站基本信息设置、用户管理、邮件设置、数据库设置、URL模式设置、手机设置、主题设置、图片上传设置如果不清楚可以到官方网(www.lanrenmb.com)论坛获取帮助<br />
+						<font color="#f60">用户管理</font><br />
+						是指后台登陆用户管理，可以修改用户名和密码，同时还可以查看最一次登陆系统的IP和时间！<br />
+						<font color="#f60">邮件设置</font><br />
+						发送SMTP、端口、来自邮箱、邮件属名、发送邮箱、邮箱密码这几项目是必须填的，少了将不能成功发送邮件！<br />
+						<font color="#f60">数据库设置</font><br />
+						数据库类型、主机名、端口号、数据库名、用户名、密码这些项都是必填的，修改前请确认你的数据库信息能正常链接，并且确保数据库有lanren和数据表内容。如果没有可以到官方网站下载导入到数据库中;如果不正确会导致网站不能运行！<br />
+						<font color="#f60">URL模式设置</font><br />
+						兼容模式:*路径格式能兼容所有环境:/index.php?s=/admin/Index/url<br />
+						伪静态模式:*路径格式需要服务器.htaccess配置：/url（从官网下载程序包会自带.htaccess文件）<br />
+						普通模式:*?m=module&a=action&id=1<br />
+						PATHINFO模式:*module/action/year/2008/month/09/day/21/<br />
+						<font color="#f60">手机设置</font><br />
+						手机二级域名:*可以设置手机网站手级域名：wap.lanrenmb.com<br />
+						注：设置前请解析你的二级域名到你的服务并且绑定否则无效！<br />
+						<font color="#f60">主题设置</font><br />
+						默认主题:、主题列表:*如果有多套模板可以在这里添加模板名；如果你有多套模板你可以通过域名用t方法预览如：http://diy.lanrenmb.com?t=azan<br />
+						<font color="#f60">图片上传设置</font><br />
+						上传大小限制:*字节，1KB=1024字节、缩略图片宽:、缩略图片高:<br />
+						<h3><a name="info">信息管理</a></h3><br />
+						分为：分类添加、分类管理、信息添加、信息管理、单页添加、单页管理;<br />
+						<font color="#f60">分类添加</font><br />
+						分类名称、分类路径（不填系统会自动取分类名的首字母）、分类标题(SEO)、分类关键词(SEO)、分类描述(SEO)、分类模板(可以不填，如果不填系统会自动选择你选择的分类类型对应的模板)、分页数量、分类选择、信息  图片、分类图片:等功能选择<br />
+						<font color="#f60">分类管理</font><br />
+						可以查看分类信息和修改删除分类；<br />
+						<font color="#f60">信息添加</font><br />
+						填写项：信息标题、属性设置:置顶  推荐  验证  允许评论、SEO标题:、关键词:、信息描述:缩略图、作者:、来源、人气、时间、文件名(url)、显示模板（如果填了则会使用你填写的模板，不填系统会自动根据选择的分类匹配相应的模板）<br />
+						<font color="#f60">信息管理</font><br />
+						可以查看分类信息和修改删除信息；<br />
+					<h3><a  name="fujia">附加功能管理</a></h3><br />
+						目前分为：评论管理、留言管理、模板管理、链接添加、链接管理、Sitemap生成、删除缓存等几项功能！后期会根据用户需求不断开发新的功能<br />
+						<font color="#f60">评论管理</font><br />
+						可以管理文章对应的评论并且回复评论，回复评论的同时会自动发邮件提醒评论者！<br />
+						<font color="#f60">模板管理</font><br />
+						可以在后台编辑前台模板，请以html为模板后缀！<br />
+						<font color="#f60">友情链接管理</font><br />
+						可以添加和管理友情链接！<br />
+						<font color="#f60">Sitemap生成</font><br />
+						可以预览xml的网站地图，点击生成会自动生成一个sitemap.xml的文件在网站根目录！<br />
+						<font color="#f60">删除缓存</font><br />
+						修改信息和模板后请删除缓存！否则不能看到修改效果！<br />
+					<h3><a  name="tags">全局标签</a></h3><br />
+						全局标签是lanren的系统标签之一，在任何地方都可以调用，优先于其他标签系列。<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$webname}</font></span>   	<b>作用</b>		 网站名称<br />	
+						<span style="float:left; width:120px;"><font color="#f60">{$webkey}</font></span>   	<b>作用</b> 	 网站关键词<br />	
+						<span style="float:left; width:120px;"><font color="#f60">{$webdesc}</font></span>  	<b>作用</b>		 网站描述<br />	
+						<span style="float:left; width:120px;"><font color="#f60">{$seotitle}</font></span>  <b>作用</b> 	 网站SEO标题<br />	
+						<span style="float:left; width:120px;"><font color="#f60">{$domain}</font></span>  	<b>作用</b> 	 网站域名<br />	
+						<span style="float:left; width:120px;"><font color="#f60">{$beian}</font></span>   	<b>作用</b> 	 网站备案号<br />	
+						<span style="float:left; width:120px;"><font color="#f60">{$tel}</font></span>   		<b>作用</b> 	 电话号码<br />	
+						<span style="float:left; width:120px;"><font color="#f60">{$qq}</font></span>   		<b>作用</b> 	 QQ<br />	
+						<span style="float:left; width:120px;"><font color="#f60">{$email}</font></span>      <b>作用</b> 	 邮箱<br />	
+						<span style="float:left; width:120px;"><font color="#f60">{$adress}</font></span>     <b>作用</b>      地址<br />	
+						<span style="float:left; width:120px;"><font color="#f60">{$copyright}</font></span>  <b>作用</b>      版权信息<br />	
+						<span style="float:left; width:120px;"><font color="#f60">{$catename}</font></span>  		<b>作用</b>      分类名<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$catetitle}</font></span>  		<b>作用</b>     分类SEO标题<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$cateurl}</font></span>  		<b>作用</b>      分类URL<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$catekey}</font></span>  		<b>作用</b>      分类关键词<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$catedesc}</font></span>  		<b>作用</b>      分类描述<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$catelogo}</font></span>  		<b>作用</b>      分类logo<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$textcate}</font></span>  		<b>作用</b>      文章分类列表(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$piccate}</font></span>  		<b>作用</b>      图片分类列表(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$newpic}</font></span>  		<b>作用</b>      最新图片列表(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$recpic}</font></span>  		<b>作用</b>      推荐图片列表(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$toppic}</font></span>  		<b>作用</b>      置顶图片列表(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$hotpic}</font></span>  		<b>作用</b>      热门评论图片列表按点击(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$hotrevpic}</font></span>  		<b>作用</b>   热门评论图片列表(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$newinfo}</font></span>  		<b>作用</b>   最新文章信息列表(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$recinfo}</font></span>  		<b>作用</b>   推荐文章信息列表(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$topinfo}</font></span>  		<b>作用</b>   置顶文章信息列表(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$hotinfo}</font></span>  		<b>作用</b>   热门文章列表按点击(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$hotrevinfo}</font></span>  		<b>作用</b>   热门评论文章列表(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$pagelist}</font></span>  		<b>作用</b>   单页列表(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$link}</font></span>  		<b>作用</b>   	  友情链接列表(<a href="#xunhuan">使用说明请查看列表循环说明</a>)<br />
+				<h3><a  name="xunhuan">动态/列表循环标签</a></h3><br />
+						<font color="#f60">分类循环</font><br />
+							下面是分类循环，不同的分类可以用上面的不同的标签比如：下面的是文章则是name="textcate" 图片则是name="piccate"<br />
+							< volist name="textcate" id="lanren" ><br />
+						
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.id}</font></span> <b>作用</b>分类ID<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.cateurl}</font></span> <b>作用</b>分类URL<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.catename}</font></span> <b>作用</b>分类名称<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.catetitle}</font></span> <b>作用</b>分类SEO标题<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.catekey}</font></span> <b>作用</b>分类关键词<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.catedesc}</font></span> <b>作用</b>分类描述<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.catelogo}</font></span> <b>作用</b>分类logo<br />
+							< / volist><br />
+							<font color="#f60">信息循环</font><br />
+							信息包括文字和图片分类都是一样的用！在分类页可以用name="list",同时全局信息列表类标签也是可以用以下标签；比如要循环10条推荐的图片信息列表 name="recpic"   offset="0" length="10" <br />
+							< volist name="list" id="lanren"><br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.id}</font></span> <b>作用</b>文章ID<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.title}</font></span> <b>作用</b>信息标题<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.url}</font></span> <b>作用</b>信息URL<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.istop}</font></span> <b>作用</b>置顶信息（1为置顶0为不置顶）<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.isrec}</font></span> <b>作用</b>推荐信息（1为推荐0为不推荐）<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.isrev}</font></span> <b>作用</b>是否允许评论(1为允许0为不允许)<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.infotitle}</font></span> <b>作用</b>信息SEO标题<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.infokey}</font></span> <b>作用</b>信息关键词<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.infodesc}</font></span> <b>作用</b>分类描述<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.content}</font></span> <b>作用</b>信息内容<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.ispic}</font></span> <b>作用</b>信息缩略图<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.author}</font></span> <b>作用</b>信息作者<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.from}</font></span> <b>作用</b>信息来源<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.revs}</font></span> <b>作用</b>信息评论数量<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.hits}</font></span> <b>作用</b>信息点击量<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.time}</font></span> <b>作用</b>信息发布时间<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.phoneurl}</font></span> <b>作用</b>预留字段<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.pcurl}</font></span> <b>作用</b>预留字段<br />
+							< / volist><br />
+							<font color="#f60">单页循环</font><br />
+								< volist name="pagelist" id="lanren" ><br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.id}</font></span> <b>作用</b>单页ID<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.title}</font></span> <b>作用</b>单页标题<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.url}</font></span> <b>作用</b>单页URL<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.pcpic}</font></span> <b>作用</b>单页缩略图<br />						
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.infotitle}</font></span> <b>作用</b>单页SEO标题<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.infokey}</font></span> <b>作用</b>单页关键词<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.infodesc}</font></span> <b>作用</b>单页描述<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.content}</font></span> <b>作用</b>单页内容<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.author}</font></span> <b>作用</b>信息作者<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.from}</font></span> <b>作用</b>信息来源<br />							
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.hits}</font></span> <b>作用</b>信息点击量<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.time}</font></span> <b>作用</b>信息发布时间<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$lanren.oururl}</font></span> <b>作用</b>预留字段<br />
+						
+								
+								< /volist>
+						<h3><a  name="xinxi">信息页专用标签</a></h3><br />
+								<span style="float:left; width:120px;"><font color="#f60">{$commentlist}</font></span> <b>作用</b>评论列表<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$upcateurl}</font></span> <b>作用</b>上一级分类URL<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$title}</font></span> <b>作用</b>信息标题<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$classtitle}</font></span> <b>作用</b>上一级分类名<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$seotitle}</font></span> <b>作用</b>SEO标题<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$infokey}</font></span> <b>作用</b>信息关键词<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$infodesc}</font></span> <b>作用</b>信息描述<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$content}</font></span> <b>作用</b>信息内容<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$ispic}</font></span> <b>作用</b>信息缩略图<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$from}</font></span> <b>作用</b>信息来源<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$revs}</font></span> <b>作用</b>信息评论数量<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$isrev}</font></span> <b>作用</b>是否允许评论(1为允许0为不允许)<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$author}</font></span> <b>作用</b>信息作者<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$hits}</font></span> <b>作用</b>信息点击数量<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$time}</font></span> <b>作用</b>信息发布时间<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$url}</font></span> <b>作用</b>信息URL（不包括域名）<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$pcurl}</font></span> <b>作用</b>预留字段<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$phoneurl}</font></span> <b>作用</b>预留字段<br />
+						<h3><a  name="danye">单页专用标签</a></h3><br />	
+							
+								
+								<span style="float:left; width:120px;"><font color="#f60">{$title}</font></span> <b>作用</b>单页标题<br />
+						
+								<span style="float:left; width:120px;"><font color="#f60">{$seotitle}</font></span> <b>作用</b>SEO标题<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$pagekey}</font></span> <b>作用</b>单页关键词<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$pagedesc}</font></span> <b>作用</b>单页描述<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$content}</font></span> <b>作用</b>信息内容<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$pic}</font></span> <b>作用</b>单页缩略图<br />				
+								<span style="float:left; width:120px;"><font color="#f60">{$author}</font></span> <b>作用</b>单页作者<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$hits}</font></span> <b>作用</b>单页点击数量<br />
+								<span style="float:left; width:120px;"><font color="#f60">{$time}</font></span> <b>作用</b>单页发布时间<br />
+						<h3><a  name="reply">评论列表标签</a></h3><br />
+								用于信息内容页，使用举例<br />
+								< if condition="$isrev eq 0">(如果后台没开启评论显示)不允许评论</p>< else/>
+				
+					< volist name="commentlist" id="revs"><br />
+					<span style="float:left; width:120px;"><font color="#f60">{$revs.homepage}</font></span> <b>作用</b>主页<br />
+						
+						<span style="float:left; width:120px;"><font color="#f60">{$revs.name}</font></span> <b>作用</b>评论者称呼<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$revs.time}</font></span> <b>作用</b>评论时间<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$revs.connent}</font></span> <b>作用</b>评论内容<br />	
+						< if condition="$revs.reply "></font></span><b>作用</b>(如果有回复)<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$revs.replytime}</font></span><b>作用</b>回复时间<br />
+						<span style="float:left; width:120px;"><font color="#f60">{$revs.reply}</font></span><b>作用</b>回复内容<br />
+						
+						< /if>
+					</dl>
+					< /volist><br />
+					发表评论POST地址：__GROUP__/Index/comment<br />
+					称呼 name="name" <br />
+					E-mail name="email" <br />
+					主页 name="homepage" <br />
+					内容 name="connent" <br />
+					验证码 src="__GROUP__/code"  <br />
+					
+				< /if><br />
+				懒人模板DIY基本标签整理完毕，如果有不明白的可以加QQ群：<font color="red">347882616</font>
+								
+								
+		
+		
+		</div>
+		</div>
+	</body>
+</html>

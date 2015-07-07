@@ -1,0 +1,110 @@
+<include file="./App/Tpl/Admin/header.html"/>	
+<include file="./App/Tpl/Admin/left.html"/>	  
+<script type="text/javascript" src="__PUBLIC__/ckeditor/ckeditor.js"></script>
+<div class="diywap_right">
+		<div class="well well-sm">修改单页</div>
+
+	
+			<form action="__GROUP__/Index/xpage" method="post" class="form-horizontal" accept-charset="utf-8" />
+			<div class="form-group">
+					 <label for="title" class="col-sm-2 control-label">信息标题:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="title" name="title"  value="{$xinfo[title]}"/>
+					 </div>
+			</div>
+			<div class="form-group">
+					 <label for="infotitle" class="col-sm-2 control-label">SEO标题:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="infotitle" name="infotitle" value="{$xinfo[infotitle]}"/>
+					 </div>
+			</div>	
+			<div class="form-group">
+					 <label for="infokey" class="col-sm-2 control-label">关键词:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="infokey" name="infokey" value="{$xinfo[infokey]}" />
+					 </div>
+			</div>	
+			<div class="form-group">
+					 <label for="infodesc" class="col-sm-2 control-label">信息描述:</label>
+					 <div class="col-sm-4">
+					 <textarea class="form-control" rows="3" name="infodesc" placeholder="信息描述"/>{$xinfo[infodesc]}</textarea>
+					 </div>
+			</div>				
+			<div class="form-group">
+					 <label for="content" class="col-sm-2 control-label">信息内容:</label>
+					 <div class="col-sm-8">
+			
+				<textarea name="content" class="form-control" id="content" style="width:100%; height:300px;">{$xinfo[content]}</textarea>
+						<script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor.js"></script>
+						<script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+						<script>
+								KindEditor.ready(function(K) {
+										window.editor = K.create('#content');
+								});
+						
+						</script>	
+				</div>
+			</div>
+			<div class="form-group">
+					 <label for="pcpic" class="col-sm-2 control-label">缩略图:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="pcpic" id="pcpic" name="pcpic" value="{$xinfo[pcpic]}"/>
+					 <iframe src="__GROUP__/Index/pcupload" height="35" frameborder="0" scrolling="no" width="400" ></iframe>
+					 </div>
+			</div>
+			
+			<div class="form-group">
+					 <label for="author" class="col-sm-2 control-label">作者:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="author" name="author" value="{$xinfo[author]}" placeholder="作者"/>
+					
+					 </div>
+			</div>
+			<div class="form-group">
+					 <label for="author" class="col-sm-2 control-label">人气:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="hits" name="hits" value="{$xinfo[hits]}" placeholder="作者"/>
+					
+					 </div>
+			</div>
+			<div class="form-group">
+					 <label for="time" class="col-sm-2 control-label">时间:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="hits" name="time" value="{$xinfo[time]}" placeholder="作者"/>
+					
+					 </div>
+			</div>
+			<div class="form-group">
+					 <label for="url" class="col-sm-2 control-label">路径:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="text" name="url" value="{$xinfo[url]}"/>
+					
+					 </div>
+			</div>
+			<div class="form-group">
+					 <label for="outurl" class="col-sm-2 control-label">外部链接:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="outurl" name="outurl" value="{$xinfo[outurl]}" placeholder="如果需要跳转到别的链接请填写"/>
+					
+					 </div>
+			</div>
+			<div class="form-group">
+					 <label for="pagetem" class="col-sm-2 control-label">前台模板:</label>
+					 <div class="col-sm-4">
+					 <input  class="form-control input-sm" type="pagetem" name="pagetem"  value="{$xinfo[pagetem]}"/>
+					
+					 </div>
+			</div>
+			
+			<input type="hidden" name="id" value="{$xinfo[id]}" />
+			 	<button type="submit" class="btn btn-primary btn-lg">保 存</button>
+		
+			</form>
+		<p></p>
+		<p></p>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

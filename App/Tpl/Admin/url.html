@@ -1,0 +1,31 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+		<div class="diywap_right">
+		<div class="well well-sm">网站URL配置</div>
+		<form class="form-horizontal"  action="" method="post" />
+			<div class="form-group">
+			<div class="checkbox">
+				<label>
+				  <input type="radio"  <if condition="$Think.config.URL_MODEL eq 3">checked="checked"</if> name="mode" value="3" /> *路径格式能兼容所有环境:/index.php?s=/admin/Index/url
+				</label><br />
+				<label>
+				  <input type="radio"  <if condition="$Think.config.URL_MODEL eq 2">checked="checked"</if> name="mode" value="2" />*路径格式需要服务器.htaccess配置：/url
+				</label><br />
+				<label>
+				  <input type="radio"  <if condition="$Think.config.URL_MODEL eq 1">checked="checked"</if> name="mode" value="1" />*?m=module&a=action&id=1
+				</label><br />
+				<label>
+				  <input type="radio"  <if condition="$Think.config.URL_MODEL eq 0">checked="checked"</if> name="mode" value="0" />*module/action/year/2008/month/09/day/21/
+				</label>
+				
+			</div>
+			<button type="submit" class="btn btn-primary btn-lg"  >保 存</button>
+		</form>
+		
+		</div>
+
+
+
+	</div>
+</body>
+</html>

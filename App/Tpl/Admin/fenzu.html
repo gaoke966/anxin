@@ -1,0 +1,31 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>
+<style>
+#grid{padding-top:15px;background:url(../images/w1000bg.png) center top repeat-y;font-size:0}.grid{*word-spacing:-1px;/* IE6��7 */}	.grid li{z-index:0;font-size:12px;list-style-type: none;float:left;}	.grid li{*display:inline;*zoom:1;*float:left;}		.grid li.hover{cursor:pointer}	.grid li h3{font-size:20px;font-weight:normal;height:140px;line-height:28px}	.grid li h3 a{padding-top:15px;display:block;height:185px;z-index:100;position:absolute;width:188px;text-align:center;top:0;left:0}	.grid li h3 img{border-radius:43px;height:86px;width:86px}	.grid li h3 span{display:block;_padding-top:7px}	.grid li p{font-size:13px;text-align:center;color:#888;line-height:22px;z-index:10}#grid .mix{opacity:0;display:none}</style>
+
+
+		<div class="diywap_right">
+		<div class="well well-sm">模板管理</div>
+					<table class="table table-hover table-bordered">						<tr><td>
+						<ul class="cateradio g grid" id="grid">							
+						<?php 
+						$mulu=$_GET['_URL_'];
+						//print_r($mulu);
+						echo '<h4>';
+						if($mulu[3] == 'Home'){
+							echo '电脑模板';
+						}elseif($mulu[3] == 'Wap'){
+							echo '手机模板';
+						}								
+						echo '主题列表</h4>';
+						$dir =@opendir('./App/Tpl/'.$mulu[3].'/');//要打开的目录名；						while(($file = readdir($dir))!=false){							if ($file!="." && $file!="..") {								$files[] = $file;							}						}						natsort($files); // sort.												foreach($files as $file){
+								$tmp = '';								$tmp2 = '';								if($mulu[3] == 'Home'){									if($pc_template == $file){										$tmp = 'checked';									}									$tmp2 = 'p';								}								if($mulu[3] == 'Wap'){									if($wap_template == $file){										$tmp = 'checked';									}									$tmp2 = 't';								}																								echo '<li style="margin:10px 30px;" style="text-align:center">								 <a href="__GROUP__/Index/appTemplate/'.$tmp2.'/'.$file.'"><img src="/App/Tpl/'.$mulu[3].'/'.$file.'/ico.png"></a><h4> <input class="radio" type="radio" name="optype" value="'.$file.'" '.$tmp.' style="float:left;margin-left:100px;" onclick="javascript:location.href=\'__GROUP__/Index/appTemplate/'.$tmp2.'/'.$file.'\'"> 模板'.$file.'&nbsp;&nbsp<a href=__GROUP__/Index/moremoban/'.$mulu[3].'/'.$file.'>编辑</a></h4></li> ';							 
+						}											?>		
+										</ul>
+					</td></tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

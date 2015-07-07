@@ -1,0 +1,45 @@
+<include file="./App/Tpl/Admin/header.html"/>			
+<include file="./App/Tpl/Admin/left.html"/>	
+		<div class="right">
+		 <table border="0" align="center" cellpadding="3" cellspacing="1" class="table_b">
+			<tr>
+			  <td width="30" class="title_bg">ID</td>
+			  <td class="title_bg">标题</td>
+			  <td width="40" class="title_bg">评论</td>
+			  <td width="60" class="title_bg">人气</td>
+			  <td width="40" class="title_bg">外连</td>
+			  <td width="40" class="title_bg">缩图</td>
+			  <td width="100" class="title_bg">类别</td>
+			  <td width="140" class="title_bg">状态</td>
+			  <td width="100" class="title_bg">管理</td>
+			  <td width="130" class="title_bg">时间</td>
+			</tr>
+			<volist name="list" id="vo">
+			 <tr style="background:#ffffff;">
+			  <td height="25" align="center">{$vo.id}</td>
+			  <td ><a href="{$vo.url}" target="_blank">{$vo.anliname}</a></td>
+			  <td align="center">{$vo.revs}</td>
+			  <td align="center">{$vo.hits}</td>
+			  <td align="center"><span class="c9"><if condition="$vo.outurl eq null">否</span><else/>是</if></td>
+			  <td align="center"><span class="c9"><if condition="$vo.ispic eq null">否</span><else/>是</if></td>
+			  <td align="center"><a href="__GROUP__/Index/seeinfo/classtitle/{$vo.anliclass}">{$vo.anliclass}</a></td>
+			  <td align="center"><if condition="$vo.isshow eq 1">已验证<else/><span class="c9">未验证</span></if>&nbsp;<if condition="$vo.isrec eq 1">已推荐<else/><span class="c9">未推荐</if></span>&nbsp;<if condition="$vo.istop eq 1">已置顶<else/><span class="c9">未置顶</if></span></td>
+			  <td align="center"><a href="__GROUP__/Index/xanli/id/{$vo.id}">编辑</a> <a href="__GROUP__/Index/delanli/id/{$vo.id}" onclick='return confirm("真的要删除?不可恢复!");'>删除</a></td>
+			  <td align="center">{$vo.time}</td>
+			</tr>
+			</volist>
+			<tr>
+      <td colspan="9" class="tdbg content_page" align="center">{$page}</td>
+	</tr>
+
+			
+		</table>
+		
+			<p></p>
+			
+
+
+		</div>
+		</div>
+		</body>
+		</html>
