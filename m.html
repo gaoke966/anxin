@@ -1,3 +1,25 @@
 <SCRIPT LANGUAGE="JavaScript">
 alert('navigator.platform==='+navigator.platform+'||||||navigator.appVersion==='+navigator.appVersion);
+
+var check = navigator.appVersion;
+
+
+
+	 if( check.match(/linux/i) )
+
+          {
+         alert('linux');
+
+		 //X11是UC浏览器的平台 ，如果有其他特殊浏览器也可以附加上条件
+
+		 if(check.match(/mobile/i) || check.match(/X11/i)) 
+
+                 { 
+
+			alert('mobile');
+
+		 }   
+
+	}
+
 </SCRIPT>

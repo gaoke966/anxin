@@ -106,7 +106,7 @@ function mobile_device_detect(url)
 	if(is_array($aa)){
 		$wap = $aa[0];
 		$domain = preg_replace('/([^\.]+)\.(.+)/i', $wap.".$2", $_SERVER['SERVER_NAME']);
-		echo 'mobile_device_detect("http://'.$domain.'");';
+		//echo 'mobile_device_detect("http://'.$domain.'");';
 	}
 ?>
 
