@@ -67,8 +67,7 @@ function mobile_device_detect(url)
 		 if(check.match(/mobile/i) || check.match(/X11/i)) 
 
                  { 
-
-			window.location=url;
+			window.location='http://xinghuo.yixin.com/mobile/shop/anxin';
 
 		 }   
 
@@ -105,8 +104,8 @@ function mobile_device_detect(url)
 	$aa = array_keys($aa);
 	if(is_array($aa)){
 		$wap = $aa[0];
-		$domain = preg_replace('/([^\.]+)\.(.+)/i', $wap.".$2", $_SERVER['SERVER_NAME']);
-		//echo 'mobile_device_detect("http://'.$domain.'");';
+		//$domain = preg_replace('/([^\.]+)\.(.+)/i', $wap.".$2", $_SERVER['SERVER_NAME']);
+		echo 'mobile_device_detect("http://'.$domain.'");';
 	}
 ?>
 
